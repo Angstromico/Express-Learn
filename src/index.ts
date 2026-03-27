@@ -5,9 +5,11 @@ import router from 'routes'
 dotenv.config()
 
 const app = express()
+
+app.use(express.json())
+
 const PORT = Number(process.env.PORT ?? 8080)
 
 app.use(router)
 
 app.listen(PORT, () => console.log(`The App is running in Port: ${PORT}`))
-
