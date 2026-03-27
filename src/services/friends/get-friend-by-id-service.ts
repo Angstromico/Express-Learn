@@ -1,9 +1,11 @@
-import { friends, type IFriends } from 'data/friends'
+import FriendModel, { type IFriendModel } from 'models/friends.model'
 
-async function getFriendByIdService(id: string): Promise<IFriends | null> {
+async function getFriendByIdService(
+  id: string,
+): Promise<IFriendModel | undefined> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const friend = friends.find((friend) => friend.id === id) || null
+      const friend = FriendModel.findById(id)
       resolve(friend)
     }, 1500)
   })

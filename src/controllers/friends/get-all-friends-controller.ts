@@ -10,6 +10,7 @@ const getAllFriendsController = asyncHandler(async (req, res) => {
       status: 'fail',
       message: 'There are not friends yet',
     })
+    return
   }
 
   res.status(OK).json({

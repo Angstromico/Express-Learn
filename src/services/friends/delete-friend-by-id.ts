@@ -1,17 +1,12 @@
-import { friends, type IFriends } from 'data/friends'
+import FriendModel, { type IFriendModel } from 'models/friends.model'
 
 async function deleteFriendById(
   id: string,
-): Promise<Omit<IFriends, 'age'> | null> {
+): Promise<Omit<IFriendModel, 'age'> | null> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const friendIndex = friends.findIndex((friend) => friend.id === id)
-      if (friendIndex === -1) {
-        resolve(null)
-      } else {
-        const deletedFriend = friends.splice(friendIndex, 1)[0]
-        resolve({ id: deletedFriend.id, name: deletedFriend.name })
-      }
+      const deletedFriend = FriendModel.deleteById(id)
+      resolve(deletedFriend)
     }, 1500)
   })
 }

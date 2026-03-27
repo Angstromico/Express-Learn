@@ -10,7 +10,6 @@ const getFriendByIdController = asyncHandler(async (req, res) => {
       status: 'fail',
       message: 'Friend id is required',
     })
-    return
   }
 
   const friend = await getFriendByIdService(id)
@@ -20,6 +19,7 @@ const getFriendByIdController = asyncHandler(async (req, res) => {
       status: 'fail',
       message: `Friend with id ${id} does not exist`,
     })
+    return
   }
 
   res.status(OK).json({

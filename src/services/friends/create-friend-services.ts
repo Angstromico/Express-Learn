@@ -1,15 +1,11 @@
-import { friends, type IFriends } from 'data/friends'
+import FriendModel, { type IFriendModel } from 'models/friends.model'
 
 async function createFriendServices(
-  newFriend: Omit<IFriends, 'id'>,
-): Promise<IFriends> {
+  newFriend: Omit<IFriendModel, 'id'>,
+): Promise<IFriendModel> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const friend: IFriends = {
-        id: `${friends.length + 1}`,
-        ...newFriend,
-      }
-      friends.push(friend)
+      const friend = FriendModel.create(newFriend)
       resolve(friend)
     }, 1500)
   })

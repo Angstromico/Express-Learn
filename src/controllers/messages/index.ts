@@ -1,0 +1,6 @@
+export { default as getAllMessagesController } from './get-all-messages-controller'
+export { default as getMessageByIdController } from './get-message-by-id-controller'
+export { default as getMessagesByUserIdController } from './get-messages-by-user-id-controller'
+export { default as createMessageController } from './create-message-controller'
+export { default as updateMessageByIdController } from './update-message-by-id-controller'
+export { default as deleteMessageByIdController } from './delete-message-by-id-controller'

@@ -1,21 +1,13 @@
-import { friends, type IFriends } from 'data/friends'
+import FriendModel, { type IFriendModel } from 'models/friends.model'
 
 async function updateFriendById(
   id: string,
-  updates: Partial<Omit<IFriends, 'id'>>,
-): Promise<IFriends | null> {
+  updates: Partial<Omit<IFriendModel, 'id'>>,
+): Promise<IFriendModel | null> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const friendIndex = friends.findIndex((friend) => friend.id === id)
-      if (friendIndex === -1) {
-        resolve(null)
-      } else {
-        friends[friendIndex] = {
-          ...friends[friendIndex],
-          ...updates,
-        }
-        resolve(friends[friendIndex])
-      }
+      const friend = FriendModel.updateById(id, updates)
+      resolve(friend)
     }, 1500)
   })
 }
