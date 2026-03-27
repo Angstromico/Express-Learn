@@ -1,14 +1,23 @@
-# Node.js + TypeScript Starter Template
+# Express.js Learning Journey
 
-This repository is a basic starter template for `Node.js` projects using TypeScript. It includes essential configurations and scripts to streamline your development workflow.
+This repository contains my first steps in learning **Express.js** as part of the **"Complete NodeJS Developer (GraphQL, MongoDB, + more)"** course. This project represents the initial exercises and implementations I've completed while following the course curriculum.
 
 ---
 
-# 📋 Features
+# 📋 Course Progress
 
-- **TypeScript Support**: Write your `Node.js `code in TypeScript for improved type safety.
-- **Auto-Rebuild and Restart**: Automatically compiles TypeScript and restarts the server when you make changes.
-- **Preconfigured Build and Watch Scripts**: Simple scripts for building and running the project in development mode.
+This repository tracks my learning progress through the Express.js sections of the course. The implementations here represent:
+
+- **Initial Express.js Setup**: Basic server configuration and routing
+- **TypeScript Integration**: Using TypeScript with Express.js for type safety
+- **Development Workflow**: Auto-rebuild and restart functionality for efficient learning
+- **Core Concepts**: Understanding Express.js fundamentals through hands-on exercises
+
+# 🛠️ Technical Features
+
+- **TypeScript Support**: Write Express.js code in TypeScript for improved type safety
+- **Auto-Rebuild and Restart**: Automatically compiles TypeScript and restarts the server when you make changes
+- **Preconfigured Build and Watch Scripts**: Simple scripts for building and running the project in development mode
 
 ---
 
@@ -53,8 +62,17 @@ When you’re ready to build the project for production, simply run:
 
 2. **Restart the server** automatically whenever changes are detected in the compiled dist/ files.
 
-## 📝 Notes
+## � Learning Notes
 
+This repository serves as my personal learning journal while progressing through the course. Each implementation represents my understanding of the concepts taught in the "Complete NodeJS Developer" course.
+
+### Technical Configuration
 1. The project is configured with `TypeScript` output targeting `ES2020` syntax.
 2. The module and moduleResolution are set to `NodeNext` to align with Node.js module standards.
 3. Adjust the compilerOptions in tsconfig.json as needed for your project requirements.
+
+### Course Context
+- **Course**: Complete NodeJS Developer (GraphQL, MongoDB, + more)
+- **Focus**: Express.js fundamentals and best practices
+- **Progress**: Initial learning phase with basic implementations
+- **Goal**: Build a solid foundation in Express.js development
