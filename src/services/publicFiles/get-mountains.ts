@@ -1,7 +1,7 @@
 import path from 'path'
 
 function getMountains() {
-  const mountains = path.join(process.cwd(), 'public', 'mountains.avif')
+  const mountains = path.join(process.cwd(), 'public', 'mountains.jpg')
   return mountains
 }
 
