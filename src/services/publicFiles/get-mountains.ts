@@ -1,7 +1,7 @@
-import patch from 'path'
+import path from 'path'
 
 function getMountains() {
-  const mountains = patch.join(process.cwd(), 'public', 'mountains')
+  const mountains = path.join(process.cwd(), 'public', 'mountains')
   return mountains
 }
 
