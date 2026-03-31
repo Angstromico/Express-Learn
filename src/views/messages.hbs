@@ -1,0 +1,84 @@
+<div class="messages-container">
+  <h2>Messages</h2>
+  
+  {{#if error}}
+    <div class="error">
+      <p>{{error}}</p>
+    </div>
+  {{/if}}
+
+  {{#if messages}}
+    <ul class="messages-list">
+      {{#each messages}}
+        <li class="message-item">
+          <div class="message-content">
+            <p class="message-text">{{text}}</p>
+            <div class="message-meta">
+              <span class="message-user">User: {{userId}}</span>
+              <span class="message-time">{{timestamp}}</span>
+            </div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <ul class="messages-list">
+      <li class="message-item">
+        <p>No messages available</p>
+      </li>
+    </ul>
+  {{/if}}
+</div>
+
+<style>
+.messages-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.messages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message-item {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.message-user {
+  font-weight: bold;
+}
+
+.error {
+  background: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #c62828;
+}
+</style>
