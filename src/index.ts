@@ -8,11 +8,19 @@ dotenv.config()
 
 const app = express()
 
+app.set('view engine', 'hbs')
+app.set('views', 'src/views')
 app.use(express.static('public'))
 app.use(express.json())
 
 const PORT = Number(process.env.PORT ?? 8080)
 
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'Welcome to the Express App',
+    caption: 'Mountains are calling and I must go!',
+  })
+})
 app.use(dataPopulationMiddleware)
 app.use(getUserMethodAndRoute())
 app.use(router)
